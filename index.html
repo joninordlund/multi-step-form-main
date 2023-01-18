@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Epilogue:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Multi-step form</title>
   </head>
   <body>
@@ -41,36 +42,47 @@
           </div>
         </div>
       </div>
-      <div class="info">
+      <div class="step-container">
         <div>
-          <h1>Personal info</h1>
-          <p>Please provide your name, email address, and phone number.</p>
-          <form>
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="e.g. Stephen King"
-            />
-            <label for="email">Email Address</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="stephenking@lorem.com"
-            />
-            <label for="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="e.g. +1 234 567 890"
-            />
-          </form>
+          <div class="info">
+            <div>
+              <h1>Personal info</h1>
+              <p>Please provide your name, email address, and phone number.</p>
+              <form>
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="e.g. Stephen King"
+                />
+                <label for="email">Email Address</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="stephenking@lorem.com"
+                />
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="e.g. +1 234 567 890"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="plan">
+            <div>
+              <h1>Select your plan</h1>
+              <p>You have the option of monthly or yearly billing.</p>
+            </div>
+          </div>
         </div>
-        <div class="info-bottom">
-          <button class="btn">Next Step</button>
+        <div class="bottom">
+          <button class="btn-back">Go Back</button>
+          <button class="btn-next">Next Step</button>
         </div>
       </div>
     </main>

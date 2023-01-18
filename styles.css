@@ -86,11 +86,15 @@ body {
 
 .step {
   text-transform: uppercase;
+  --bgcolor: transparent;
+  --color: white;
 }
 
 .step::before {
   content: counter(step);
   counter-increment: step;
+  color: var(--color);
+  background-color: var(--bgcolor);
   display: grid;
   place-content: center;
   position: absolute;
@@ -102,41 +106,63 @@ body {
   font-weight: var(--fw-bold);
 }
 
-.info {
-  flex-grow: 1;
+/* Step 1 info */
+
+.step-container {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
   padding: 3em 3em 1em 0;
 }
 
-.info h1 {
+.step-container h1 {
   margin-bottom: 0.4em;
 }
 
-.info p {
+.step-container p {
   color: var(--clr-cool-gray);
+}
+
+.info {
+  display: none;
+}
+
+.plan {
+  display: block;
 }
 
 form {
   margin-top: 2em;
 }
+
 input {
   display: block;
   width: 100%;
   border-radius: 5px;
-  border: solid var(--clr-cool-gray) 1px;
+  border: solid var(--clr-light-gray) 1px;
   padding: 0.5em;
   font-size: 1rem;
   margin-bottom: 1em;
   margin-top: 0.3em;
 }
 
-.info-bottom {
-  margin-left: auto;
+/* Buttons */
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
 }
 
-.btn {
+.btn-back {
+  border: none;
+  background-color: transparent;
+  color: var(--clr-cool-gray);
+  font-size: 1.1rem;
+  font-weight: var(--fw-med);
+}
+
+.btn-next {
   padding: 0.8em 1.5em;
   border-radius: 10px;
   font-size: 1.1rem;

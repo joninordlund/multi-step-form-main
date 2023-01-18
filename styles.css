@@ -1,0 +1,146 @@
+:root {
+  /* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+  /* Colors */
+
+  --clr-backgrnd: #eef5ff;
+
+  /* Primary */
+
+  --clr-marine-blue: #02295a;
+  --clr-purplish-blue: #473dff;
+  --clr-pastel-blue: #adbeff;
+  --clr-light-blue: #bfe2fd;
+  --clr-strawberry-red: #ed3548;
+
+  /* Neutral */
+
+  --clr-cool-gray: #9699ab;
+  --clr-light-gray: #d6d9e6;
+  --clr-magnolia: #f0f6ff;
+  --clr-alabaster: #fafbff;
+  --clr-white: #ffffff;
+
+  /* Font */
+  --fw-reg: 400;
+  --fw-med: 500;
+  --fw-bold: 700;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Ubuntu, sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-backgrnd);
+}
+.sidebar h4 {
+  font-weight: var(--fw-med);
+}
+
+.sidebar h5 {
+  font-weight: var(--fw-reg);
+  opacity: 0.6;
+}
+
+.container {
+  min-width: 60vw;
+  min-height: 80vh;
+  background-color: var(--clr-white);
+  border-radius: 20px;
+  display: flex;
+  gap: 2em;
+  padding: 1em;
+}
+
+.sidebar {
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/bg-sidebar-desktop.svg);
+  background-size: cover;
+  color: var(--clr-white);
+  padding: 2.5em 6em 0em 4.5em;
+  flex-shrink: 1;
+  border-radius: 10px;
+}
+
+.steps {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 2em;
+  counter-reset: step;
+}
+
+.step {
+  text-transform: uppercase;
+}
+
+.step::before {
+  content: counter(step);
+  counter-increment: step;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  border: solid var(--clr-white) 1px;
+  height: 2em;
+  width: 2em;
+  left: -2.7em;
+  border-radius: 50%;
+  font-weight: var(--fw-bold);
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3em 3em 1em 0;
+}
+
+.info h1 {
+  margin-bottom: 0.4em;
+}
+
+.info p {
+  color: var(--clr-cool-gray);
+}
+
+form {
+  margin-top: 2em;
+}
+input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: solid var(--clr-cool-gray) 1px;
+  padding: 0.5em;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  margin-top: 0.3em;
+}
+
+.info-bottom {
+  margin-left: auto;
+}
+
+.btn {
+  padding: 0.8em 1.5em;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: var(--fw-med);
+  color: var(--clr-white);
+  background-color: var(--clr-marine-blue);
+}
